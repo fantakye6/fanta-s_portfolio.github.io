@@ -271,21 +271,57 @@
                 <p></p>
             </div>
 
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        .portfolio-item { display: none; }
+        .filter-active { color: #007bff; }
+    </style>
+</head>
+<body>
+    <section id="portfolio" class="portfolio section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Portfolio</h2>
+            </div>
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <ul id="portfolio-flters">
-                        <li data-filter="*"class="filter-active">All</li>
-                        <li data-filter=".filter-1ère">Travaux 1ère année</li>
-                        <li data-filter=".filter-Stage">Stage</li>
-                        <li data-filter=".filter-2nd">Travaux 2nd année</li>
-                        <li data-filter=".filter-3ème">Travaux 3ème année</li>
-                        <li data-filter=".filter-vidéos">Vidéos</li>
+                    <ul id="portfolio-flters" class="list-inline">
+                        <li class="list-inline-item filter-active" data-filter="*">All</li>
+                        <li class="list-inline-item" data-filter=".filter-1ère">Travaux 1ère année</li>
+                        <li class="list-inline-item" data-filter=".filter-Stage">Stage</li>
+                        <li class="list-inline-item" data-filter=".filter-2nd">Travaux 2nd année</li>
+                        <li class="list-inline-item" data-filter=".filter-3ème">Travaux 3ème année</li>
+                        <li class="list-inline-item" data-filter=".filter-vidéos">Vidéos</li>
                     </ul>
                 </div>
             </div>
-
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-1ère">
+                    <img src="image1.jpg" class="img-fluid" alt="Travaux 1ère année">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-Stage">
+                    <img src="image2.jpg" class="img-fluid" alt="Stage">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-2nd">
+                    <img src="image3.jpg" class="img-fluid" alt="Travaux 2nd année">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-3ème">
+                    <img src="image4.jpg" class="img-fluid" alt="Travaux 3ème année">
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-vidéos">
+                    <video class="img-fluid" controls>
+                        <source src="video1.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
+        </div>
 
                <!-- ITEM PORTFOLIO -->
 <div class="col-lg-4 col-md-6 portfolio-item filter-1ère">
