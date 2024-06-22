@@ -328,22 +328,49 @@
                 </div>
             </div>
 
-            <!-- ITEM PORTFOLIO 4 -->
-            <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-Stage">
-                <div class="portfolio-wrap">
-                    <img src="assets/immeuble Gironde086_0.jpeg" class="img-fluid" alt="Stage au Département de la Gironde">
-                    <div class="portfolio-info">
-                        <h4>Stage au Département de la Gironde</h4>
-                        <p>Stage 1ère</p>
-                        <div class="portfolio-links">
-                            <a href="assets/immeuble Gironde086_0.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                            <a href="assets/img/IMG_4714.pdf" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                            <a href="assets/IMG_4632.pdf" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
-                        </div>
-                    </div>
-                </div>
+           <!-- ITEM PORTFOLIO 4 -->
+<div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-Stage">
+    <div class="portfolio-wrap">
+        <img src="assets/immeuble Gironde086_0.jpeg" class="img-fluid" alt="Stage au Département de la Gironde">
+        <div class="portfolio-info">
+            <h4>Stage au Département de la Gironde</h4>
+            <p>Stage 1ère</p>
+            <div id="portfolio-links" class="portfolio-links">
             </div>
+        </div>
+    </div>
+</div>
 
+<script>
+    const images = [
+        "assets/immeuble Gironde086_0.jpeg",
+        "assets/img/IMG_4714.pdf",
+        "assets/IMG_4632.pdf",
+    
+        "assets/nouvelle-image-1.jpg",
+        "assets/nouvelle-image-2.jpg",
+        
+    ];
+
+    
+    function addImageLinks() {
+        const portfolioLinks = document.getElementById('portfolio-links');
+        
+        images.forEach(imagePath => {
+            const link = document.createElement('a');
+            link.href = imagePath;
+            link.setAttribute('data-gallery', 'portfolioGallery');
+            link.className = 'portfolio-lightbox';
+            
+            const icon = document.createElement('i');
+            icon.className = 'bx bx-plus';
+            
+            link.appendChild(icon);
+            portfolioLinks.appendChild(link);
+        });
+    }
+    document.addEventListener('DOMContentLoaded', addImageLinks);
+</script>
             <!-- ITEM PORTFOLIO 5 -->
             <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-vidéos">
                 <div class="video-wrapper">
