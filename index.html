@@ -285,17 +285,17 @@
                 <div class="row">
                     <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
                         <ul id="portfolio-filters" class="list-inline">
-                            <li class="list-inline-item" data-filter="*">All</li>
-                            <li class="list-inline-item" data-filter=".filter-1ère">Travaux 1ère année</li>
+                            <li class="list-inline-item" data-filter="*" class="filter-active">All</li>
+                            <li class="list-inline-item" data-filter=".filter-1ere">Travaux 1ère année</li>
                             <li class="list-inline-item" data-filter=".filter-Stage">Stage</li>
                             <li class="list-inline-item" data-filter=".filter-2nd">Travaux 2nd année</li>
-                            <li class="list-inline-item" data-filter=".filter-3ème">Travaux 3ème année</li>
-                            <li class="list-inline-item" data-filter=".filter-vidéos">Vidéos</li>
+                            <li class="list-inline-item" data-filter=".filter-3eme">Travaux 3ème année</li>
+                            <li class="list-inline-item" data-filter=".filter-videos">Vidéos</li>
                         </ul>
                     </div>
                 </div>
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-1ère">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-1ere">
                         <img src="image1.jpg" class="img-fluid" alt="Travaux 1ère année">
                     </div>
                     <div class="col-lg-4 col-md-6 portfolio-item filter-Stage">
@@ -304,17 +304,39 @@
                     <div class="col-lg-4 col-md-6 portfolio-item filter-2nd">
                         <img src="image3.jpg" class="img-fluid" alt="Travaux 2nd année">
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-3ème">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-3eme">
                         <img src="image4.jpg" class="img-fluid" alt="Travaux 3ème année">
                     </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-vidéos">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-videos">
                         <video class="img-fluid" controls>
                             <source src="video1.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
             </div>
-      
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+            $(document).ready(function() {
+                AOS.init();
+                $('#portfolio-filters li').on('click', function() {
+                    $('#portfolio-filters li').removeClass('filter-active');
+                    $(this).addClass('filter-active');
+                    let filterValue = $(this).attr('data-filter');
+                    if (filterValue == "*") {
+                        $('.portfolio-item').show(400);
+                    } else {
+                        $('.portfolio-item').not(filterValue).hide(400);
+                        $(filterValue).show(400);
+                    }
+                });
+            });
+        </script>
+    </body>
+    </html>
+    
+
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             </div>
 
